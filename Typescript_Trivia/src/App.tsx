@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className="container bg-red-500" id='main-container'>
+    <div className="container max-w-full h-screen text-white bg-[url('https://imgur.com/8csQzXk.png')]" id='main-container'>
       Trivia
     </div>
   )
