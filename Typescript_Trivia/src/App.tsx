@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className="bg-red-500">
+    <div className="container bg-red-500" id='main-container'>
       Trivia
     </div>
   )
