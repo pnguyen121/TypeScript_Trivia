@@ -54,7 +54,7 @@ function App() {
       <QuestionCard 
       questionNr={number + 1}
       totalQuestions={TOTAL_QUESTIONS}
-      question={questions[number].question}
+      question={questions[number]}
       />
       <button className='' onClick={nextQuestion}>Next Question</button>
     </div>
