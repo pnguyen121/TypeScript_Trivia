@@ -3,7 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// import function from API.ts file and Types named difficulty
+import { Difficulty, fetchQuizQuestions } from './API'
+
 import QuestionCard from './Components/QuestionCard'
+
+
 
 // API LINK HERE TO SAVE https://opentdb.com/api.php?amount=10&category=15&type=multiple
 
@@ -24,6 +29,9 @@ function App() {
   const [score, setScore] = useState(0)
   const [gameOver, setGameOver] = useState(true)
 
+
+  // CONSOLE.LOG QUIZ QUESTIONS TO SEE
+  console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY), "fetch quiz qs on app.tsx")
 
 
   const startTrivia = async () => {
@@ -51,11 +59,14 @@ function App() {
       <button className='' onClick={startTrivia}>Start Game</button>
       <p className=''>Score:</p>
       <p className=''>Loading Questions ...</p>
-      <QuestionCard 
+      {/* <QuestionCard 
       questionNr={number + 1}
       totalQuestions={TOTAL_QUESTIONS}
-      question={questions[number]}
-      />
+      question={questions[number].question}
+      answers={questions[number].answers}
+      userAnswer={userAnswers ? userAnswers[number] : undefined}
+      callback={checkAnswer}
+      /> */}
       <button className='' onClick={nextQuestion}>Next Question</button>
     </div>
   )
