@@ -30,7 +30,7 @@ function App() {
   const [gameOver, setGameOver] = useState(true)
 
 
-  // CONSOLE.LOG QUIZ QUESTIONS TO SEE
+  // CONSOLE.LOG QUIZ QUESTIONS TO SEE in browsser console
   console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY), "fetch quiz qs on app.tsx")
 
 

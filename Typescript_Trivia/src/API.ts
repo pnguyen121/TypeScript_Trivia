@@ -1,4 +1,5 @@
-
+// import shuffle array function in
+import { shuffleArray } from "./utils";
 
 
 // specify type for each question
@@ -30,4 +31,8 @@ export const fetchQuizQuestions = async (amount: number, difficulty: Difficulty)
     const data = await (await fetch(endpoint)).json()
     // console log to see how json data its laid out when looking in browser console
     console.log(data, "data from fetch quiz questions")
+    return data.results.map((question: Question) => ({
+        ...question,
+        answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
+    }))
 }
