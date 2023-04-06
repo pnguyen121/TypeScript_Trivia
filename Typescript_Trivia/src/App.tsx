@@ -4,10 +4,19 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 // import function from API.ts file and Types named difficulty
-import { Difficulty, fetchQuizQuestions } from './API'
+import { Difficulty, fetchQuizQuestions, QuestionState} from './API'
 
 import QuestionCard from './Components/QuestionCard'
 
+
+// Type answer object
+type AnswerObject = {
+  question: string;
+  answer: string;
+  correct: boolean;
+  correctAnswer: string;
+
+}
 
 
 // API LINK HERE TO SAVE https://opentdb.com/api.php?amount=10&category=15&type=multiple
@@ -18,14 +27,14 @@ const TOTAL_QUESTIONS = 10;
 
 
 
-
 function App() {
 
   // States
   const [loading, setLoading] = useState(false)
-  const [questions, setQuestions] = useState([])
+  // letting it know the array will be from Question state so if anything other than that it will error
+  const [questions, setQuestions] = useState<QuestionState[]>([])
   const [number, setNumber] = useState(0)
-  const [userAnswers, setUserAnswers] = useState([])
+  const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([])
   const [score, setScore] = useState(0)
   const [gameOver, setGameOver] = useState(true)
 
