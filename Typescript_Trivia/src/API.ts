@@ -1,6 +1,20 @@
 
 
 
+// specify type for each question
+export type Question = {
+    category: string;
+    correct_answer: string;
+    difficulty: string;
+    incorrect_answers: string[];
+    question: string;
+    type: string;
+}
+
+// Adding to the Question above, adding answers in an array of strings.
+export type QuestionState = Question & {answers: string[]}
+
+
 // Set difficulty so the function can grab
 export enum Difficulty {
     EASY = "easy",
