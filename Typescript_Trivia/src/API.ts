@@ -30,7 +30,9 @@ export const fetchQuizQuestions = async (amount: number, difficulty: Difficulty)
     // Double await first await the fetch then await when convertint to json
     const data = await (await fetch(endpoint)).json()
     // console log to see how json data its laid out when looking in browser console
-    console.log(data, "data from fetch quiz questions")
+    console.log(data, "data from fetch quiz questions in api.ts")
+    
+    // return the data mapped with Question and shuffleArray to mix up the the array. map a new array with the incorrect answers and right answer all together
     return data.results.map((question: Question) => ({
         ...question,
         answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
