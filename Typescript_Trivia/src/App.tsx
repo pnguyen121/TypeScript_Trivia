@@ -39,12 +39,39 @@ function App() {
   const [gameOver, setGameOver] = useState(true)
 
 
-  // CONSOLE.LOG QUIZ QUESTIONS TO SEE in browsser console
-  console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY), "fetch quiz qs on app.tsx")
+  // CONSOLE.LOG QUIZ QUESTIONS TO SEE in browsser console, for testing early on
+  // console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY), "fetch quiz qs on app.tsx")
 
 
+// START TRIVIA BY RUNNING THIS | Connect it to onClick for the button in the HTML
   const startTrivia = async () => {
+    // set loading to true
+    setLoading(true)
+    // its not game over so its false
+    setGameOver(false)
 
+
+    try {
+      // Grab data from fetchQuizQuestions
+    const newQuestions = await fetchQuizQuestions(
+      // # of questions
+      TOTAL_QUESTIONS,
+      // Difficulty
+      Difficulty.EASY
+    );
+
+    // Set the questions to the data we grabbed from the await
+    setQuestions(newQuestions)
+    setScore(0)
+    setUserAnswers([])
+    setNumber(0)
+    // done loading
+    setLoading(false)
+
+    } catch (error) {
+      console.log(error, 'Error in App.tsx startTrivia funct')
+      
+    }
 
   }
 
