@@ -50,7 +50,6 @@ function App() {
     // its not game over so its false
     setGameOver(false)
 
-
     try {
       // Grab data from fetchQuizQuestions
     const newQuestions = await fetchQuizQuestions(
@@ -94,7 +93,7 @@ function App() {
       <h1>Trivia</h1>
       {/* ternary to get rid of start button after its hit */}
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-        <button className='' onClick={startTrivia}>Start Game</button>
+        <button className='btn btn-stone' onClick={startTrivia}>Start Game</button>
       ): <p>change this to null TEST</p> }
 
 
@@ -120,7 +119,7 @@ function App() {
       userAnswer={userAnswers ? userAnswers[number] : undefined}
       callback={checkAnswer}
       /> */}
-      <button className='' onClick={nextQuestion}>Next Question</button>
+      <button className='btn btn-stone' onClick={nextQuestion}>Next Question</button>
     </div>
   )
 }

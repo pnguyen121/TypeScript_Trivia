@@ -33,7 +33,7 @@ function QuestionCard ({question, answers, callback, userAnswer, questionNr, tot
             <div>
                 {answers.map(answer => (
                     <div>
-                        <button disabled={userAnswer} onClick={callback}>
+                        <button className="btn-2" disabled={userAnswer} onClick={callback}>
                             <span dangerouslySetInnerHTML={{__html: answer}}></span>
                         </button>
                     </div>
