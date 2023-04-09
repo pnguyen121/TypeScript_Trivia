@@ -92,9 +92,26 @@ function App() {
   return (
     <div className="container max-w-full h-screen text-white bg-[url('https://imgur.com/N6abCOy.png')]" id='main-container'>
       <h1>Trivia</h1>
-      <button className='' onClick={startTrivia}>Start Game</button>
-      <p className=''>Score:</p>
-      <p className=''>Loading Questions ...</p>
+      {/* ternary to get rid of start button after its hit */}
+      {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
+        <button className='' onClick={startTrivia}>Start Game</button>
+      ): <p>change this to null TEST</p> }
+
+
+        {/* If gameover = false (not game over) show score while game isnt over*/}
+      {!gameOver ? <p className=''>Score:</p> : null}
+      {loading ? <p className=''>Loading Questions ...</p> : null}
+
+      {!loading && !gameOver && (
+      <QuestionCard 
+      questionNr={number + 1}
+      totalQuestions={TOTAL_QUESTIONS}
+      question={questions[number].question}
+      answers={questions[number].answers}
+      userAnswer={userAnswers ? userAnswers[number] : undefined}
+      callback={checkAnswer}
+      />
+      )}
       {/* <QuestionCard 
       questionNr={number + 1}
       totalQuestions={TOTAL_QUESTIONS}

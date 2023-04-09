@@ -18,7 +18,9 @@ type Props = {
 
 // Since i used the normal function delaration instead of arrow function like const myFunc = () => {} 
 // Has to be formatted this way and use ReactNode instead of React.FC 
-function QuestionCard ({question, answers, callback, userAnswer, questionNr, totalQuestions}: Props): React.ReactNode{
+
+// ReactNode was throwing JSX errow so hangedd it to JSX.Element    
+function QuestionCard ({question, answers, callback, userAnswer, questionNr, totalQuestions}: Props): JSX.Element{
     return ( 
         <div>
             <p className="">
