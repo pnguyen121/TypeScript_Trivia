@@ -72,7 +72,7 @@ function App() {
       className="container max-w-full h-screen text-white bg-[url('https://imgur.com/N6abCOy.png')]"
       id="main-container"
     >
-      <h1>Trivia</h1>
+      <h1>Trivia!</h1>
       {/* ternary to get rid of start button after its hit */}
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
         <button className="btn btn-stone" onClick={startTrivia}>
