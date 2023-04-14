@@ -64,7 +64,27 @@ function App() {
   };
 
   // Tell it the type by writing React.MouseEvent and let it knows its an HTML button that will be clicked
-  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {};
+  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // If game isnt over and not loading
+    if(!gameOver && !loading){
+      // Get users answer. the current target value is whatever button is being clicked. Must add a value prop to button on Q card
+      const answer = e.currentTarget.value
+      // Check answer against correct answer. Will give true or false
+      const correct = questions[number].correct_answer === answer;
+      // Add to score if answer is correct
+      if(correct){
+        setScore(prev => prev + 1)
+      }
+      // Save answer in the array for user answers
+      const AnswerObject = {
+        question: questions[number].question,
+        answer,
+        correct,
+        correctAnswer: questions[number].correct_answer,
+      };
+      setUserAnswers((prev) => [...prev, AnswerObject]);
+    }
+  };
 
   const nextQuestion = () => {};
 
