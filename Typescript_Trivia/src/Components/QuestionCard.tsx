@@ -32,7 +32,7 @@ function QuestionCard ({question, answers, callback, userAnswer, questionNr, tot
 {/* Map through each answer and create a div to put answers in */}
             <div>
                 {answers.map(answer => (
-                    <div>
+                    <div key={answer}>
                         <button className="btn-2" disabled={userAnswer} onClick={callback}>
                             <span dangerouslySetInnerHTML={{__html: answer}}></span>
                         </button>

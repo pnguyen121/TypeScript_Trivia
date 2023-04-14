@@ -27,6 +27,7 @@ function App() {
   // letting it know the array will be from Question state so if anything other than that it will error
   const [questions, setQuestions] = useState<QuestionState[]>([]);
   const [number, setNumber] = useState(0);
+  // array of objectss that match the AnswerObject Type
   const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
