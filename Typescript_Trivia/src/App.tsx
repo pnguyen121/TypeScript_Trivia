@@ -35,7 +35,7 @@ function App() {
   // CONSOLE.LOG QUIZ QUESTIONS TO SEE in browsser console, for testing early on
   // console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY), "fetch quiz qs on app.tsx")
 
-  // START TRIVIA BY RUNNING THIS | Connect it to onClick for the button in the HTML
+  // START TRIVIA BY RUNNING THIS | Connect it to onClick for the button in the HTML ====
   const startTrivia = async () => {
     // set loading to true
     setLoading(true);
@@ -64,7 +64,7 @@ function App() {
   };
 
 
-  // CHECK ANSWER FUNCTION
+  // CHECK ANSWER FUNCTION ====
   // Tell it the type by writing React.MouseEvent and let it knows its an HTML button that will be clicked
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     // If game isnt over and not loading
@@ -89,7 +89,7 @@ function App() {
   };
 
 
-  // NEXT QUESTION FUNCTION
+  // NEXT QUESTION FUNCTION ====
   const nextQuestion = () => {
     // Move on to the next question if not the last question
     const nextQuestion = number + 1;
@@ -118,7 +118,7 @@ function App() {
       )}
 
       {/* If gameover = false (not game over) show score while game isnt over*/}
-      {!gameOver ? <p className="">Score:</p> : null}
+      {!gameOver ? <p className="">Score: {score}</p> : null}
       {/* if loading show a p like below */}
       {loading ? <p className="">Loading Questions ...</p> : null}
 
