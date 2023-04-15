@@ -63,6 +63,8 @@ function App() {
     }
   };
 
+
+  // CHECK ANSWER FUNCTION
   // Tell it the type by writing React.MouseEvent and let it knows its an HTML button that will be clicked
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     // If game isnt over and not loading
@@ -86,7 +88,19 @@ function App() {
     }
   };
 
-  const nextQuestion = () => {};
+
+  // NEXT QUESTION FUNCTION
+  const nextQuestion = () => {
+    // Move on to the next question if not the last question
+    const nextQuestion = number + 1;
+    // if nextQuestion === Total questions which is 10 would mean its no the last one, since its not we move to the else.
+    if(nextQuestion === TOTAL_QUESTIONS){
+      setGameOver(true)
+    } else {
+      // set the number state to whatever number question we are on
+      setNumber(nextQuestion)
+    }
+  };
 
   return (
     <div
