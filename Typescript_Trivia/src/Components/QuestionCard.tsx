@@ -1,5 +1,8 @@
 import React from "react";
 
+// Import Types from app.tsx
+import { AnswerObject } from "../App";
+
 
 // This is where we set the types
 type Props = {
@@ -8,8 +11,9 @@ type Props = {
     // indicates an array of strings 
     answers: string[];
     // indicates it can be any type
-    callback: any;
-    userAnswer: any;
+    callback: (e: React.MouseEvent<HTMLButtonElement>) => void
+    // AnswerObject or undefined
+    userAnswer: AnswerObject | undefined
     questionNr: number;
     totalQuestions: number;
 }
@@ -33,7 +37,7 @@ function QuestionCard ({question, answers, callback, userAnswer, questionNr, tot
             <div>
                 {answers.map(answer => (
                     <div key={answer}>
-                        <button className="btn-2" disabled={userAnswer} value={answer} onClick={callback}>
+                        <button className="btn-2" disabled={userAnswer ? true : false} value={answer} onClick={callback}>
                             <span dangerouslySetInnerHTML={{__html: answer}}></span>
                         </button>
                     </div>
