@@ -63,19 +63,18 @@ function App() {
     }
   };
 
-
   // CHECK ANSWER FUNCTION ====
   // Tell it the type by writing React.MouseEvent and let it knows its an HTML button that will be clicked
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     // If game isnt over and not loading
-    if(!gameOver && !loading){
+    if (!gameOver && !loading) {
       // Get users answer. the current target value is whatever button is being clicked. Must add a value prop to button on Q card
-      const answer = e.currentTarget.value
+      const answer = e.currentTarget.value;
       // Check answer against correct answer. Will give true or false
       const correct = questions[number].correct_answer === answer;
       // Add to score if answer is correct
-      if(correct){
-        setScore(prev => prev + 1)
+      if (correct) {
+        setScore((prev) => prev + 1);
       }
       // Save answer in the array for user answers
       const AnswerObject = {
@@ -88,17 +87,16 @@ function App() {
     }
   };
 
-
   // NEXT QUESTION FUNCTION ====
   const nextQuestion = () => {
     // Move on to the next question if not the last question
     const nextQuestion = number + 1;
     // if nextQuestion === Total questions which is 10 would mean its no the last one, since its not we move to the else.
-    if(nextQuestion === TOTAL_QUESTIONS){
-      setGameOver(true)
+    if (nextQuestion === TOTAL_QUESTIONS) {
+      setGameOver(true);
     } else {
       // set the number state to whatever number question we are on
-      setNumber(nextQuestion)
+      setNumber(nextQuestion);
     }
   };
 
@@ -107,41 +105,45 @@ function App() {
       className="container max-w-full h-screen text-white bg-[url('https://imgur.com/N6abCOy.png')]"
       id="main-container"
     >
-      <h1>Trivia!</h1>
-      {/* ternary to get rid of start button after its hit */}
-      {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-        <button className="btn btn-stone" onClick={startTrivia}>
-          Start Game
-        </button>
-      ) : (
-        <p>change this to null TEST</p>
-      )}
+      <div className="flex flex-row justify-center grid-rows-1 h-72">
+        <div className="grid-cols-1 justify-center">
+        <h1 className="">Video Game Quiz!</h1>
+        {/* ternary to get rid of start button after its hit */}
+        {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
+          <button className="btn btn-stone" onClick={startTrivia}>
+            Start Game
+          </button>
+        ) : (
+          <p>change this to null TEST</p>
+        )}
 
-      {/* If gameover = false (not game over) show score while game isnt over*/}
-      {!gameOver ? <p className="">Score: {score}</p> : null}
-      {/* if loading show a p like below */}
-      {loading ? <p className="">Loading Questions ...</p> : null}
+        {/* If gameover = false (not game over) show score while game isnt over*/}
+        {!gameOver ? <p className="">Score: {score}</p> : null}
+        {/* if loading show a p like below */}
+        {loading ? <p className="">Loading Questions ...</p> : null}
 
-      {!loading && !gameOver && (
-        <QuestionCard
-          questionNr={number + 1}
-          totalQuestions={TOTAL_QUESTIONS}
-          question={questions[number].question}
-          answers={questions[number].answers}
-          userAnswer={userAnswers ? userAnswers[number] : undefined}
-          callback={checkAnswer}
-        />
-      )}
+        {!loading && !gameOver && (
+          <QuestionCard
+            questionNr={number + 1}
+            totalQuestions={TOTAL_QUESTIONS}
+            question={questions[number].question}
+            answers={questions[number].answers}
+            userAnswer={userAnswers ? userAnswers[number] : undefined}
+            callback={checkAnswer}
+          />
+        )}
 
-{/* Only show the next question button if game isnt over, isnt loading, and userAnswerss is === etc etc */}
-      {!gameOver &&
-      !loading &&
-      userAnswers.length === number + 1 &&
-      number !== TOTAL_QUESTIONS - 1 ? (
-        <button className="btn btn-stone" onClick={nextQuestion}>
-          Next Question
-        </button>
-      ) : null}
+        {/* Only show the next question button if game isnt over, isnt loading, and userAnswerss is === etc etc */}
+        {!gameOver &&
+        !loading &&
+        userAnswers.length === number + 1 &&
+        number !== TOTAL_QUESTIONS - 1 ? (
+          <button className="btn btn-stone" onClick={nextQuestion}>
+            Next Question
+          </button>
+        ) : null}
+        </div>
+      </div>
     </div>
   );
 }
