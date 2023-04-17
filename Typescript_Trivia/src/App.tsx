@@ -105,16 +105,16 @@ function App() {
       className="container max-w-full h-screen text-white bg-[url('https://imgur.com/N6abCOy.png')]"
       id="main-container"
     >
-      <div className="flex flex-row justify-center grid-rows-1 h-72">
-        <div className="grid-cols-1 justify-center">
-        <h1 className="">Video Game Quiz!</h1>
+      <div className="flex flex-row justify-center grid-rows-1 h-3/4">
+        <div className="flex flex-col grid-cols-1 justify-center items-center">
+        <h1 className="text-6xl mb-5">Video Game Quiz!</h1>
         {/* ternary to get rid of start button after its hit */}
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-          <button className="btn btn-stone" onClick={startTrivia}>
+          <button className="btn btn-indigo " onClick={startTrivia}>
             Start Game
           </button>
         ) : (
-          <p>change this to null TEST</p>
+          null
         )}
 
         {/* If gameover = false (not game over) show score while game isnt over*/}
@@ -138,7 +138,7 @@ function App() {
         !loading &&
         userAnswers.length === number + 1 &&
         number !== TOTAL_QUESTIONS - 1 ? (
-          <button className="btn btn-stone" onClick={nextQuestion}>
+          <button className="btn btn-indigo" onClick={nextQuestion}>
             Next Question
           </button>
         ) : null}
