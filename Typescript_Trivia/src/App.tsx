@@ -102,7 +102,7 @@ function App() {
 
   return (
     <div
-      className="container max-w-full h-screen text-white bg-[url('https://imgur.com/N6abCOy.png')]"
+      className="container max-w-full h-screen text-white bg-[url('https://i.imgur.com/efeNnkZ.jpg')] bg-cover"
       id="main-container"
     >
       <div className="flex flex-row justify-center grid-rows-1 h-3/4">
