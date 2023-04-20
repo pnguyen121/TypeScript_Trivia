@@ -26,12 +26,12 @@ type Props = {
 // ReactNode was throwing JSX errow so hangedd it to JSX.Element    
 function QuestionCard ({question, answers, callback, userAnswer, questionNr, totalQuestions}: Props): JSX.Element{
     return ( 
-        <div>
-            <p className="">
+        <div className="mb-5">
+            <p className="pb-5">
                 Question: {questionNr} / {totalQuestions}
             </p>
             {/* must use dangerouslySetInnerHTML to render text with react to recognize the HTML tags */}
-            <p dangerouslySetInnerHTML={{__html: question}} />
+            <p className="pb-5" dangerouslySetInnerHTML={{__html: question}} />
 
 {/* Map through each answer and create a div to put answers in */}
             <div>

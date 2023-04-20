@@ -118,7 +118,7 @@ function App() {
         )}
 
         {/* If gameover = false (not game over) show score while game isnt over*/}
-        {!gameOver ? <p className="">Score: {score}</p> : null}
+        {!gameOver ? <p className="font-bold text-xl mb-5">Score: {score}</p> : null}
         {/* if loading show a p like below */}
         {loading ? <p className="">Loading Questions ...</p> : null}
 
