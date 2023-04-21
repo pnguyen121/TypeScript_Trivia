@@ -21,6 +21,7 @@ export type AnswerObject = {
 // Set amount of questions that we can change later if we want
 const TOTAL_QUESTIONS = 10;
 
+
 function App() {
   // States
   const [loading, setLoading] = useState(false);
@@ -75,6 +76,8 @@ function App() {
       // Add to score if answer is correct
       if (correct) {
         setScore((prev) => prev + 1);
+
+        
       }
       // Save answer in the array for user answers
       const AnswerObject = {

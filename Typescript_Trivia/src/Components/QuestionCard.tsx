@@ -16,7 +16,9 @@ type Props = {
     userAnswer: AnswerObject | undefined
     questionNr: number;
     totalQuestions: number;
+
 }
+
 
 
 
@@ -24,7 +26,7 @@ type Props = {
 // Has to be formatted this way and use ReactNode instead of React.FC 
 
 // ReactNode was throwing JSX errow so hangedd it to JSX.Element    
-function QuestionCard ({question, answers, callback, userAnswer, questionNr, totalQuestions}: Props): JSX.Element{
+function QuestionCard ({question, answers, callback, userAnswer, questionNr, totalQuestions, }: Props): JSX.Element{
     return ( 
         <div className="mb-5">
             <p className="pb-5">
@@ -37,8 +39,8 @@ function QuestionCard ({question, answers, callback, userAnswer, questionNr, tot
             <div>
                 {answers.map(answer => (
                     <div key={answer}>
-                        <button className="btn-2" disabled={userAnswer ? true : false} value={answer} onClick={callback}>
-                            <span dangerouslySetInnerHTML={{__html: answer}}></span>
+                        <button className="btn-2 button" disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+                            <span className="text-white" dangerouslySetInnerHTML={{__html: answer}}></span>
                         </button>
                     </div>
                 ))}
