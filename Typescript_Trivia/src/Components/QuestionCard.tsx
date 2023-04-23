@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Import Types from app.tsx
 import { AnswerObject } from "../App";
@@ -27,6 +27,17 @@ type Props = {
 
 // ReactNode was throwing JSX errow so hangedd it to JSX.Element    
 function QuestionCard ({question, answers, callback, userAnswer, questionNr, totalQuestions, }: Props): JSX.Element{
+
+    const [btnWrongColor, setBtnWrongColor] = useState('red')
+
+
+    // Function to handle the color changes when an answer is clicked
+    const changeBtnColor = () => {
+
+    }
+
+
+
     return ( 
         <div className="mb-5">
             <p className="pb-5">
