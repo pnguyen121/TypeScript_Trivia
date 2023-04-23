@@ -88,6 +88,7 @@ function App() {
       };
       setUserAnswers((prev) => [...prev, AnswerObject]);
     }
+    console.log('check answer / callback ran')
   };
 
   // NEXT QUESTION FUNCTION ====
