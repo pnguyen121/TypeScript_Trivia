@@ -21,12 +21,24 @@ html, body {
   @apply font-bold py-2 px-4 rounded;
 }
 .btn-indigo {
-  @apply bg-indigo-500 text-white;
+  @apply bg-indigo-500 text-black;
 }
 .btn-indigo:hover {
   @apply bg-stone-900;
 }
 
 .btn-2{
-  @apply bg-transparent hover:bg-indigo-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded;
+  @apply bg-transparent hover:bg-indigo-500 text-black font-semibold hover:text-black py-2 px-4 border border-indigo-500 hover:border-transparent rounded;
 }
+
+
+/* WRAPPER for question card */
+#wrapper-div{
+  max-width: 1100px;
+  background: #ebfeff;
+  border-radius: 10px;
+  border: 2px solid #0085a3;
+  padding: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25)
+}
+

@@ -30,19 +30,19 @@ function QuestionCard ({question, answers, callback, userAnswer, questionNr, tot
 
 
     return ( 
-        <div className="mb-5">
-            <p className="pb-5">
+        <div className="mb-5 text-black" id="wrapper-div">
+            <p className="pb-5 text-center">
                 Question: {questionNr} / {totalQuestions}
             </p>
             {/* must use dangerouslySetInnerHTML to render text with react to recognize the HTML tags */}
             <p className="pb-5" dangerouslySetInnerHTML={{__html: question}} />
 
 {/* Map through each answer and create a div to put answers in */}
-            <div>
+            <div className="">
                 {answers.map(answer => (
                     <div key={answer}>
                         <button className='btn-2 button'  disabled={userAnswer ? true : false} value={answer} onClick={callback}>
-                            <span className="text-white" dangerouslySetInnerHTML={{__html: answer}}></span>
+                            <span className="text-black" dangerouslySetInnerHTML={{__html: answer}}></span>
                         </button>
                     </div>
                 ))}
