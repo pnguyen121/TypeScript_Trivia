@@ -28,15 +28,6 @@ type Props = {
 // ReactNode was throwing JSX errow so hangedd it to JSX.Element | callback is check answer function in app.tsx    
 function QuestionCard ({question, answers, callback, userAnswer, questionNr, totalQuestions, }: Props): JSX.Element{
 
-    const [btnWrongColor, setBtnWrongColor] = useState(false)
-
-
-    // Function to handle the color changes when an answer is clicked
-    const changeBtnColor = () => {
-        setBtnWrongColor(!btnWrongColor)
-    }
-
-
 
     return ( 
         <div className="mb-5">
@@ -50,7 +41,7 @@ function QuestionCard ({question, answers, callback, userAnswer, questionNr, tot
             <div>
                 {answers.map(answer => (
                     <div key={answer}>
-                        <button className={`btn-2 button ${(answer === userAnswer?.correctAnswer) ? 'bg-green-500' : 'bg-red-500'}`} disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+                        <button className='btn-2 button'  disabled={userAnswer ? true : false} value={answer} onClick={callback}>
                             <span className="text-white" dangerouslySetInnerHTML={{__html: answer}}></span>
                         </button>
                     </div>
