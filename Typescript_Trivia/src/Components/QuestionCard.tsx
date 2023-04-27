@@ -42,7 +42,8 @@ function QuestionCard({
         {answers.map((answer) => (
           <div key={answer} correct-ans={userAnswer?.correctAnswer === answer} user-Clicked={userAnswer?.answer === answer}>
             <button
-              className="btn-2 button"
+              className={userAnswer?.correctAnswer == answer ? 'bg-green-500' : 'btn'} 
+            //   {userAnswer?.answer == answer ? 'btn-2' : 'bg-red-500'}
               disabled={userAnswer ? true : false}
               value={answer}
               onClick={callback}
