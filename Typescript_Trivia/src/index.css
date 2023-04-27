@@ -28,7 +28,7 @@ html, body {
 }
 
 .btn-2{
-  @apply bg-transparent hover:bg-indigo-500 text-black font-semibold hover:text-black py-2 px-4 border border-indigo-500 hover:border-transparent rounded;
+  @apply bg-transparent w-full hover:bg-indigo-500 text-black font-semibold hover:text-black py-2 px-4 border border-indigo-500 hover:border-transparent rounded;
 }
 
 
@@ -41,4 +41,35 @@ html, body {
   padding: 20px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25)
 }
+
+/* Button Wrapper */
+type ButtonWrapperProps = {
+  correct: boolean;
+  userClicked: boolean;
+}
+
+
+
+#button-wrapper{
+  transition: all 0.3s ease;
+}
+
+#button-wrapper:hover{
+  opacity: 0.8;
+}
+
+/* #button-stuff{
+  background: ${({ correct, userClicked }) => 
+    correct
+      ? 'linear-gradient(90deg, #56ffa4, #59bc86)'
+      : !correct && userClicked 
+      ? 'linear-gradient(90deg, #ff5656, #c16868)'
+      : 'linear-gradient(90deg, #56ccff, #6eafb4)'
+};
+
+  border: 3px solid #fff;
+  box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow
+} */
 
