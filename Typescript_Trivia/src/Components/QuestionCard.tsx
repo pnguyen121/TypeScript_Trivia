@@ -40,9 +40,22 @@ function QuestionCard({
       {/* Map through each answer and create a div to put answers in */}
       <div className="">
         {answers.map((answer) => (
-          <div key={answer} correct-ans={userAnswer?.correctAnswer === answer} user-Clicked={userAnswer?.answer === answer}>
+          <div
+            key={answer}
+            correct-ans={userAnswer?.correctAnswer === answer}
+            user-Clicked={userAnswer?.answer === answer}
+          >
             <button
-              className={userAnswer?.correctAnswer == answer ? 'btn-3' : 'btn-2' ? userAnswer?.answer == answer ? 'btn-4' : 'btn-2' : ''} 
+            // Button styling once clicked if correct turns green and incorrect the one clicked turns red
+              className={
+                userAnswer?.correctAnswer == answer
+                  ? "btn-3"
+                  : "btn-2"
+                  ? userAnswer?.answer == answer
+                    ? "btn-4"
+                    : "btn-2"
+                  : ""
+              }
               disabled={userAnswer ? true : false}
               value={answer}
               onClick={callback}
