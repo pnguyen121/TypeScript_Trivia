@@ -30,6 +30,12 @@ html, body {
 .btn-2{
   @apply bg-transparent w-full hover:bg-indigo-500 text-black font-semibold hover:text-black py-2 px-4 border border-indigo-500 hover:border-transparent rounded;
 }
+.btn-3{
+  @apply bg-transparent bg-green-500 w-full hover:bg-indigo-500 text-black font-semibold hover:text-black py-2 px-4 border border-black hover:border-transparent rounded;
+}
+.btn-4{
+  @apply bg-transparent bg-red-500 w-full hover:bg-indigo-500 text-black font-semibold hover:text-black py-2 px-4 border border-black hover:border-transparent rounded;
+}
 
 
 /* WRAPPER for question card */
