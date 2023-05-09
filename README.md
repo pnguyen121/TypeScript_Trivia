@@ -3,33 +3,23 @@ By Phil Nguyen
 
 Link: Coming Soon
 
-# PRE PLANNING ERD + WIREFRAME + PROJECT MANAGEMENT
-Trello: https://trello.com/b/LjKSmdnG/mern-project-4
 
 # Tech
-Mongoose, Express, React, Node.js, AWS S3 Bucket, Bcrypt, Semantic Ui React
+Vite, TypeScript, Tailwind CSS, Quiz API,
 
 # Description:
 
-NIKE SNKRS: 
+A Video Game Quiz!
 
-Deadline: 1 Week
-
-Is a copy with a twist of the nike snkrs web application. Using The MERN stack. 
+Test your knowledge with 10 video game themed questions.
 
 # Getting Started:
-POV is from an Admin view point
-
-1. When you open the website, notice the login/signup options. Make an account if you don't have one to access the features.
-2. Once you're logged in, you will see sneaker cards and a button to add a new sneaker and delete a sneaker.
-3. You can also click on a sneaker card header and view a detail page with more information on it.
-4. After typing in to add a sneaker with a image uploaded it will redirect you to the feed page and have your new sneaker appear. 
-5. An admin can continually add sneakers to keep it up to date.
+Click Start and play!
 
 
 # Screenshots:
 
-![Login Page](https://imgur.com/qEGkjyT.png)
+![Home](https://imgur.com/ybaO2kQ.png)
 
 ![Sign Up](https://imgur.com/mWNMVKf.png)
 
