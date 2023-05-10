@@ -19,9 +19,11 @@ Click Start and play!
 
 # Screenshots:
 
+Home Page
 ![Home](https://imgur.com/ybaO2kQ.png)
 
-![Sign Up](https://imgur.com/mWNMVKf.png)
+Game Started
+![Game Started](https://imgur.com/hNYnIXt.png)
 
 ![Home Page](https://i.imgur.com/OMNUpQ1.png)
 
