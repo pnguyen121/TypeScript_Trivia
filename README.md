@@ -3,17 +3,21 @@ By Phil Nguyen
 
 Link: Coming Soon
 
-
-# Tech
+# Tech Used
 Vite, TypeScript, Tailwind CSS, Quiz API,
 
 # Description:
-
 A Video Game Quiz!
 
 Test your knowledge with 10 video game themed questions.
 
 # Getting Started:
+Clone this repo and cd into the project folder.
+In the terminal type $npm run dev | This will run the project on localhost:5173.
+Head to your browser and go to localhost:5173 and play the game!
+
+Deployment link will be coming soon.
+
 Click Start and play!
 
 
@@ -34,10 +38,7 @@ You clicked the wrong answer it turns red and the correct one turns green
 
 
 
-# Next Steps:
-
-1. Way Better Styling
-2. Add multiple pictures instead of one
-3. Layout the detail page more
-4. Actual Admin functionality
-5. Having a profile page that shows your liked sneakers
+# Next Steps | Ice Box Items:
+1. Better Styling
+2. Animations when you get the answer correct
+3. 
