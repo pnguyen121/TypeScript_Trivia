@@ -25,16 +25,11 @@ Home Page
 Game Started
 ![Game Started](https://imgur.com/hNYnIXt.png)
 
-You clicked the correct answer!
-![Home Page](https://imgur.com/fH5AUGw.png)
+You clicked the correct answer! Score goes up!
+![Correct Answer](https://imgur.com/fH5AUGw.png)
 
-![Add Sneaker Form](https://imgur.com/tq6LvJV.png)
-
-![Detail Page](https://i.imgur.com/Dus5cda.png)
-
-# Nike Real App Page
-![Nike Real App](https://i.imgur.com/mmkA4Wc.png)
-![Nike Real App](https://i.imgur.com/idGZEXL.png)
+You clicked the wrong answer it turns red and the correct one turns green
+![Wrong Answer](https://imgur.com/EfHNQ0Y.png)
 
 
 
