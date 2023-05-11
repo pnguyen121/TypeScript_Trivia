@@ -25,7 +25,8 @@ Home Page
 Game Started
 ![Game Started](https://imgur.com/hNYnIXt.png)
 
-![Home Page](https://i.imgur.com/OMNUpQ1.png)
+You clicked the correct answer!
+![Home Page](https://imgur.com/fH5AUGw.png)
 
 ![Add Sneaker Form](https://imgur.com/tq6LvJV.png)
 
