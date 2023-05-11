@@ -41,4 +41,3 @@ You clicked the wrong answer it turns red and the correct one turns green
 # Next Steps | Ice Box Items:
 1. Better Styling
 2. Animations when you get the answer correct
-3. 
