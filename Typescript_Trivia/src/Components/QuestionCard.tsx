@@ -32,7 +32,7 @@ function QuestionCard({
   totalQuestions,
 }: Props): JSX.Element {
   return (
-    <motion.div animate={{y:0}} initial={{y:-500}}className="mb-5 text-black" id="wrapper-div">
+    <motion.div animate={{y:0}} initial={{y:-600}}className="mb-5 text-black" id="wrapper-div">
       <p className="pb-5 text-center">
         Question: {questionNr} / {totalQuestions}
       </p>
