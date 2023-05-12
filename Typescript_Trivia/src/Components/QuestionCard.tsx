@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { motion } from "framer-motion";
+
 // Import Types from app.tsx
 import { AnswerObject } from "../App";
 
@@ -30,7 +32,7 @@ function QuestionCard({
   totalQuestions,
 }: Props): JSX.Element {
   return (
-    <div className="mb-5 text-black" id="wrapper-div">
+    <motion.div animate={{y:0}} initial={{y:-500}}className="mb-5 text-black" id="wrapper-div">
       <p className="pb-5 text-center">
         Question: {questionNr} / {totalQuestions}
       </p>
@@ -68,7 +70,7 @@ function QuestionCard({
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -3,6 +3,9 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
+// Framer motion for animations
+import { motion } from "framer-motion";
+
 // import function from API.ts file and Types named difficulty
 import { Difficulty, fetchQuizQuestions, QuestionState } from "./API";
 
